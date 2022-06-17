@@ -27,3 +27,6 @@ for X, y in test_dataloader:
     print(f"Shape of X[N,C,H,W]: {X.shape}")
     print(f"Shape of y: {y.shape} {y.dtype}")
     break
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+print(f"Using {device} device")
