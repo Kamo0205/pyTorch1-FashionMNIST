@@ -55,7 +55,7 @@ print(model)
 loss_fn = nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(model.parameters(), lr=1e-3)
 
-def train(dataloader: DataLoader, model: NeuralNetwork, loss_fn: nn.CrossEntropyLoss, optimizer: torch.optim.sgd):
+def train(dataloader: DataLoader, model: NeuralNetwork, loss_fn: nn.CrossEntropyLoss, optimizer: torch.optim.SGD):
     size = len(dataloader.dataset)
     model.train()
     for batch, (X, y) in enumerate(dataloader):
